@@ -1,6 +1,5 @@
 package com.theamirmoradi.springamqp.rabbitmq.config;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
@@ -11,10 +10,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@RequiredArgsConstructor
 public class RabbitMQConfiguration {
 
     private final ConnectionFactory connectionFactory;
+
+    public RabbitMQConfiguration(ConnectionFactory connectionFactory) {
+        this.connectionFactory = connectionFactory;
+    }
 
     @Bean
     public AmqpTemplate amqpTemplate() {

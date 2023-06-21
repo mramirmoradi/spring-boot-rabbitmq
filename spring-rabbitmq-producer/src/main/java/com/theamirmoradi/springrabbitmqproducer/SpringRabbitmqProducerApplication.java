@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(scanBasePackages = {
 		"com.theamirmoradi.springrabbitmqproducer",
-		"com.theamirmoradi.springamqp"
+		"com.theamirmoradi.springamqp",
 })
 public class SpringRabbitmqProducerApplication {
 
