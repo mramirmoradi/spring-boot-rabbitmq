@@ -53,7 +53,7 @@
 
 		<dependency>
 			<groupId>com.theamirmoradi</groupId>
-			<artifactId>spring-amp</artifactId>
+			<artifactId>spring-amqp</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>

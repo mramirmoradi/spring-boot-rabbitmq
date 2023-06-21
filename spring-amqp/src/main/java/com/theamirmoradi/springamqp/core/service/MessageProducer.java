@@ -1,4 +1,4 @@
-package com.theamirmoradi.springamp.core.service;
+package com.theamirmoradi.springamqp.core.service;
 
 public interface MessageProducer {
 

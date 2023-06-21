@@ -1,4 +1,4 @@
-package com.theamirmoradi.springamp.rabbitmq.config;
+package com.theamirmoradi.springamqp.rabbitmq.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.core.AmqpTemplate;

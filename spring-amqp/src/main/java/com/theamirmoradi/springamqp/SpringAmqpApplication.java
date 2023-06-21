@@ -1,13 +1,13 @@
-package com.theamirmoradi.springamp;
+package com.theamirmoradi.springamqp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringAmpApplication {
+public class SpringAmqpApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringAmpApplication.class, args);
+		SpringApplication.run(SpringAmqpApplication.class, args);
 	}
 
 }
