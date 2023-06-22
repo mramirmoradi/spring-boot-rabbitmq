@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "021e9366-aa81-4341-b364-781c26922cfc",
+		"name": "Spring-Rabbitmq",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17216259"
+	},
+	"item": [
+		{
+			"name": "Direct Exchange",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"hello\":\"bye\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/exchanges/direct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exchanges",
+						"direct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fanout Exchange",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"hello\":\"from fanout\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/exchanges/fanout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exchanges",
+						"fanout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Topic Exchange",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"hello\": \"hi\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/exchanges/topic/sport.football.usa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exchanges",
+						"topic",
+						"sport.football.usa"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

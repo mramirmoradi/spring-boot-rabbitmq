@@ -13,4 +13,31 @@ services:
       - ./rabbitmq:/var/lib/rabbitmq
     environment:
       - RABBITMQ_DEFAULT_USER=admin
-      - RABBITMQ_DEFAULT_PASS=admin 
+      - RABBITMQ_DEFAULT_PASS=admin
+
+  producer:
+    build: ./spring-rabbitmq-producer/.
+    container_name: producer
+    restart: always
+    ports:
+      - "8080:8080"
+    networks:
+      - local-network
+    links:
+      - "rabbitmq:rabbitmq"
+
+  consumer:
+    build: ./spring-rabbitmq-consumer/.
+    container_name: consumer
+    restart: always
+    ports:
+      - "8081:8081"
+    networks:
+      - local-network
+    links:
+      - "rabbitmq:rabbitmq"
+
+
+networks:
+  local-network:
+    driver: bridge
